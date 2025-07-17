@@ -4,3 +4,7 @@ export interface Env {
     bool: (key: string, defaultValue?: boolean) => boolean;
     array: (key: string) => string[];
 }
+
+export interface AdminConfig {
+    locales: string[];
+}
