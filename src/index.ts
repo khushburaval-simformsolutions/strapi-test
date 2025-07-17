@@ -1,7 +1,7 @@
-import { Strapi } from '@strapi/strapi';
+import { Core } from '@strapi/strapi';
 
 export default {
-  register({ strapi }: { strapi: Strapi }) {
+  register({ strapi }: { strapi: Core.Strapi }) {
     // ...
   },
 };

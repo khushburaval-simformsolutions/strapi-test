@@ -1,7 +1,7 @@
 import { factories } from '@strapi/strapi';
-import type { Strapi } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
 
-export default factories.createCoreService('api::article.article', ({ strapi }: { strapi: Strapi }) => ({
+export default factories.createCoreService('api::article.article', ({ strapi }: { strapi: Core.Strapi }) => ({
   async getPublishedCount(): Promise<number> {
     try {
       const count = await strapi.db.query('api::article.article').count({

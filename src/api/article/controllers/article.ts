@@ -1,7 +1,7 @@
 import { factories } from '@strapi/strapi';
-import type { Strapi } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
 
-export default factories.createCoreController('api::article.article', ({ strapi }: { strapi: Strapi }) => ({
+export default factories.createCoreController('api::article.article', ({ strapi }: { strapi: Core.Strapi }) => ({
   async publishedCount(ctx: any) {
     try {
       const count = await strapi.service('api::article.article').getPublishedCount();
