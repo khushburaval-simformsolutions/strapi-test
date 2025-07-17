@@ -1,4 +1,4 @@
-module.exports = [
+const middlewares: string[] = [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
@@ -10,3 +10,5 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
+export default middlewares;
